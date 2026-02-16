@@ -81,7 +81,7 @@ export function RSVPForm() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-serif text-wedding-gold mb-4">
-            Confirmar Asistencia
+            Confirmar asistencia
           </h2>
           <p className="opacity-80 max-w-xl mx-auto">
             Por favor, confirma tu asistencia antes del 1 de octubre de 2026
