@@ -7,9 +7,10 @@ import { cn } from "@/lib/utils";
 
 const links = [
   { href: "#hero", label: "Inicio" },
-  { href: "#wedding", label: "La Boda" },
-  { href: "#details", label: "Detalles" },
-  { href: "#rsvp", label: "Confirmar Asistencia" },
+  { href: "#wedding", label: "La boda" },
+  { href: "#places", label: "Lugar" },
+  { href: "#transport", label: "Transporte" },
+  { href: "#rsvp", label: "Confirmar asistencia" },
 ];
 
 export function Navbar() {

@@ -28,8 +28,8 @@
   --color-wedding-green: #2E4A3D;
   --color-wedding-text: #333333;
 
-  --font-serif: var(--font-playfair-display);
-  --font-sans: var(--font-inter);
+  --font-playfair: var(--font-playfair);
+  --font-inter: var(--font-inter);
 }
 
 @layer base {
@@ -85,5 +85,8 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
   }
 }

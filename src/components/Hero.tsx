@@ -14,20 +14,21 @@ export function Hero() {
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1519225421980-715cb0202128?q=80&w=2600&auto=format&fit=crop')", // Wedding flowers/couple
+            "url('https://images.unsplash.com/photo-1591700331354-f7eea65d1ce8?q=80&w=2600&auto=format&fit=crop')", // Couple in suit and dress
         }}
       >
-        <div className="absolute inset-0 bg-black/40" /> {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />{" "}
+        {/* Overlay */}
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <p className="text-white text-lg md:text-xl uppercase tracking-[0.2em] mb-4 font-light">
+          <p className="text-white text-lg md:text-xl uppercase tracking-[0.2em] mb-4 font-serif font-light">
             ¡Nos Casamos!
           </p>
         </motion.div>
@@ -36,9 +37,9 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
-          className="text-5xl md:text-7xl lg:text-9xl font-serif text-white mb-6 font-medium"
+          className="text-5xl md:text-8xl lg:text-9xl font-serif text-white mb-6 font-medium font-playfair"
         >
-          Luis & <br className="md:hidden" /> Mª Carmen
+          Luis & Mª Carmen
         </motion.h1>
 
         <motion.div
