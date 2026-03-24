@@ -8,8 +8,8 @@ export function TheWedding() {
           La Boda
         </h2>
         <p className="text-lg opacity-80 mb-12">
-          Nos casamos, y lo más importante para nosotros es poder disfrutar de
-          vuestra compañía. ¡Y queremos un sí por respuesta!
+          Nos casamos y nos encantaría que formaseis parte de este día tan
+          especial para nosotros.
         </p>
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-12">
