@@ -49,7 +49,7 @@ export function Hero() {
           className="mb-12"
         >
           <p className="text-xl md:text-2xl text-white font-serif italic">
-            20 de Noviembre de 2026
+            24 de octubre de 2026
           </p>
         </motion.div>
 

@@ -84,7 +84,7 @@ export function RSVPForm() {
             Confirmar asistencia
           </h2>
           <p className="opacity-80 max-w-xl mx-auto">
-            Por favor, confirma tu asistencia antes del 1 de octubre de 2026
+            Por favor, confirma tu asistencia antes del 15 de septiembre de 2026
             para que podamos organizarlo todo.
           </p>
         </div>

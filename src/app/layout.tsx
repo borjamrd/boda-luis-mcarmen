@@ -12,7 +12,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Luis y Mª Carmen - ¡Nos Casamos!",
-  description: "Web de la boda de Luis y Mª Carmen - 20 de noviembre 2026",
+  description: "Web de la boda de Luis y Mª Carmen - 24 de octubre 2026",
 };
 
 export default function RootLayout({
