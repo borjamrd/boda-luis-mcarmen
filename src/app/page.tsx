@@ -6,6 +6,7 @@ import { Hotel } from "@/components/Hotel";
 import { Transport } from "@/components/Transport";
 import { Gift } from "@/components/Gift";
 import { RSVPForm } from "@/components/RSVPForm";
+import { Gallery } from "@/components/Gallery";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Places />
       <Hotel />
       <Transport />
+      <Gallery />
       <RSVPForm />
       <Gift />
       <Footer />

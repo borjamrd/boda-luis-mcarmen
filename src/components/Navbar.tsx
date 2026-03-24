@@ -11,6 +11,7 @@ const links = [
   { href: "#places", label: "Lugar" },
   { href: "#hotel", label: "Alojamiento" },
   { href: "#transport", label: "Transporte" },
+  { href: "#gallery", label: "Fotos" },
   { href: "#rsvp", label: "Confirmar asistencia" },
 ];
 

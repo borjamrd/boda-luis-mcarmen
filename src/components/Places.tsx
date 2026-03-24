@@ -47,7 +47,7 @@ export function Places() {
             <div className="relative aspect-square w-full overflow-hidden shrink-0">
               <Image
                 src="/hacienda.jpeg"
-                alt="Hacienda Molina De la Vega"
+                alt="Hacienda Molina de la Vega"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -70,7 +70,7 @@ export function Places() {
             </div>
             <div className="p-8 flex flex-col items-center justify-center text-center flex-grow">
               <h4 className="text-xl font-serif mb-2 text-balance leading-tight">
-                Hacienda Molina De la Vega
+                Hacienda Molina de la Vega
               </h4>
               <p className="opacity-80 text-sm">La Guardia de Jaén</p>
             </div>
