@@ -17,7 +17,7 @@ export function Places() {
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-300 flex items-end justify-center pb-6">
                 <Button
                   variant="outline"
                   className="bg-white/95 hover:bg-white text-black hover:text-black border-none shadow-xl transform transition-transform md:translate-y-4 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
@@ -51,7 +51,7 @@ export function Places() {
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-300 flex items-end justify-center pb-6">
                 <Button
                   variant="outline"
                   className="bg-white/95 hover:bg-white text-black hover:text-black border-none shadow-xl transform transition-transform md:translate-y-4 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
