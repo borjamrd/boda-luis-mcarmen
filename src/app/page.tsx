@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { TheWedding } from "@/components/TheWedding";
 import { Places } from "@/components/Places";
+import { Hotel } from "@/components/Hotel";
 import { Transport } from "@/components/Transport";
 import { Gift } from "@/components/Gift";
 import { RSVPForm } from "@/components/RSVPForm";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <TheWedding />
       <Places />
+      <Hotel />
       <Transport />
       <RSVPForm />
       <Gift />

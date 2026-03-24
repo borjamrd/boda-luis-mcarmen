@@ -9,6 +9,7 @@ const links = [
   { href: "#hero", label: "Inicio" },
   { href: "#wedding", label: "La boda" },
   { href: "#places", label: "Lugar" },
+  { href: "#hotel", label: "Hotel" },
   { href: "#transport", label: "Transporte" },
   { href: "#rsvp", label: "Confirmar asistencia" },
 ];
