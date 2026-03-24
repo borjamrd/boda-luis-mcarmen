@@ -18,7 +18,7 @@ export function TheWedding() {
               <Clock size={32} />
             </div>
             <h3 className="text-2xl font-serif mb-2">Ceremonia</h3>
-            <p className="font-bold text-xl">13:00h</p>
+            <p className="font-bold text-xl">12:00h</p>
           </div>
 
           <div className="hidden md:block w-px h-24 bg-wedding-gold/30"></div>
