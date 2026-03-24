@@ -12,7 +12,7 @@ export function Hotel() {
         <div className="max-w-4xl mx-auto bg-wedding-cream/30 rounded-xl overflow-hidden border border-wedding-gold/10 hover:border-wedding-gold/30 transition-colors">
           <div className="grid md:grid-cols-2">
             {/* Image Side with Map Button Overlay */}
-            <div className="relative h-64 md:h-auto min-h-[300px] group">
+            <div className="relative h-64 md:h-auto min-h-[300px] group overflow-hidden">
               <Image
                 src="/hotel.jpeg"
                 alt="Hotel Condestable Iranzo"

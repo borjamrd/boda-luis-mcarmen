@@ -21,7 +21,7 @@ export function RSVPForm() {
             marginHeight={0}
             marginWidth={0}
             title="Formulario de asistencia"
-            className="w-full bg-white rounded-xl shadow-sm border border-wedding-gold/10 overflow-hidden"
+            className="w-full overflow-hidden"
           >
             Cargando…
           </iframe>
