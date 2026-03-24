@@ -11,19 +11,30 @@ export function Hotel() {
         </h3>
         <div className="max-w-4xl mx-auto bg-wedding-cream/30 rounded-xl overflow-hidden border border-wedding-gold/10 hover:border-wedding-gold/30 transition-colors">
           <div className="grid md:grid-cols-2">
-            {/* Map Side */}
-            <div className="relative h-64 md:h-auto min-h-[300px]">
-              <iframe
-                src="https://maps.google.com/maps?q=Hotel+Condestable+Iranzo,+Jaen&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen={true}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Mapa del Hotel Condestable Iranzo"
-                className="absolute inset-0"
+            {/* Image Side with Map Button Overlay */}
+            <div className="relative h-64 md:h-auto min-h-[300px] group">
+              <Image
+                src="/hotel.jpeg"
+                alt="Hotel Condestable Iranzo"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+                <Button
+                  variant="outline"
+                  className="bg-white/95 hover:bg-white text-black hover:text-black border-none shadow-xl transform transition-transform md:translate-y-4 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
+                  asChild
+                >
+                  <a
+                    href="https://maps.app.goo.gl/Fy5rXsJLNhBEARX48"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MapPin size={16} className="mr-2" />
+                    Abrir en Maps
+                  </a>
+                </Button>
+              </div>
             </div>
 
             {/* Content Side */}

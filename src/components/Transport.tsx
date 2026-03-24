@@ -19,9 +19,9 @@ export function Transport() {
             <span className="inline-block px-3 py-1 bg-wedding-green/10 text-wedding-green rounded-full text-sm font-medium mb-4">
               IDA
             </span>
-            <h4 className="font-serif text-xl mb-2">Hacia la Ceremonia</h4>
+            <h4 className="font-serif text-xl mb-2">Hacia la ceremonia</h4>
             <p className="text-sm opacity-70 mb-1">Salida desde</p>
-            <p className="font-medium mb-4">Discoteca Florida 135</p>
+            <p className="font-medium mb-4">Por confirmar</p>
             <a
               href="https://maps.google.com/?q=Florida+135+Fraga"
               target="_blank"
@@ -35,9 +35,9 @@ export function Transport() {
             <span className="inline-block px-3 py-1 bg-wedding-green/10 text-wedding-green rounded-full text-sm font-medium mb-4">
               VUELTA
             </span>
-            <h4 className="font-serif text-xl mb-2">Regreso a Casa</h4>
+            <h4 className="font-serif text-xl mb-2">Regreso a casa</h4>
             <p className="text-sm opacity-70 mb-1">Salida desde</p>
-            <p className="font-medium mb-4">La Boscana</p>
+            <p className="font-medium mb-4">Hacienda Molina de la Vega</p>
             <p className="text-sm opacity-70 mt-2">Horarios a confirmar</p>
           </div>
         </div>
