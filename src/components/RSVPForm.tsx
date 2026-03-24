@@ -1,3 +1,6 @@
+import { Button } from "./ui/button";
+import { ExternalLink } from "lucide-react";
+
 export function RSVPForm() {
   return (
     <section id="rsvp" className="py-20 bg-wedding-cream/30">
@@ -12,19 +15,20 @@ export function RSVPForm() {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto w-full flex justify-center">
-          <iframe
-            src="https://docs.google.com/forms/d/1L60J0To1ugtnHRgSqvK0QvrcUKu4QcedgHjQHmDfGWg/viewform?embedded=true"
-            width="100%"
-            height="1200"
-            frameBorder="0"
-            marginHeight={0}
-            marginWidth={0}
-            title="Formulario de asistencia"
-            className="w-full overflow-hidden"
+        <div className="flex justify-center mt-8">
+          <Button
+            className="bg-wedding-gold hover:bg-wedding-gold/90 text-white text-lg px-8 py-6 h-auto"
+            asChild
           >
-            Cargando…
-          </iframe>
+            <a
+              href="https://docs.google.com/forms/d/1L60J0To1ugtnHRgSqvK0QvrcUKu4QcedgHjQHmDfGWg/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Rellenar formulario
+              <ExternalLink className="ml-2 h-5 w-5" />
+            </a>
+          </Button>
         </div>
       </div>
     </section>
