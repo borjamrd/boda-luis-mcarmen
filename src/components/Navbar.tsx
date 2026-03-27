@@ -12,7 +12,7 @@ const links = [
   { href: "#hotel", label: "Alojamiento" },
   { href: "#transport", label: "Transporte" },
   { href: "#gallery", label: "Fotos" },
-  { href: "#rsvp", label: "Confirmar asistencia" },
+  { href: "#rsvp", label: "Asistencia" },
 ];
 
 export function Navbar() {
