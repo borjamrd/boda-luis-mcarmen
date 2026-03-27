@@ -5,7 +5,7 @@ import { useState, useEffect, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const photos = [
+const initialPhotos = [
   "/pareja1.jpeg",
   "/pareja2.jpeg",
   "/pareja3.jpeg",
@@ -14,31 +14,55 @@ const photos = [
 ];
 
 export function Gallery() {
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [displayPhotos, setDisplayPhotos] = useState(initialPhotos);
+  const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
 
-  const closeLightbox = useCallback(() => setSelectedImage(null), []);
+  // Auto-shuffle every 5 seconds
+  useEffect(() => {
+    // We only shuffle if the user is not currently viewing an image
+    if (selectedPhoto !== null) return;
+
+    const interval = setInterval(() => {
+      setDisplayPhotos((prev) => {
+        const newArray = [...prev];
+        // Fisher-Yates shuffle
+        for (let i = newArray.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+        }
+        return newArray;
+      });
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [selectedPhoto]);
+
+  const closeLightbox = useCallback(() => setSelectedPhoto(null), []);
 
   const showNext = useCallback(() => {
-    setSelectedImage((prev) =>
-      prev !== null ? (prev + 1) % photos.length : null,
-    );
-  }, []);
+    if (!selectedPhoto) return;
+    const currentIndex = displayPhotos.indexOf(selectedPhoto);
+    const nextIndex = (currentIndex + 1) % displayPhotos.length;
+    setSelectedPhoto(displayPhotos[nextIndex]);
+  }, [selectedPhoto, displayPhotos]);
 
   const showPrev = useCallback(() => {
-    setSelectedImage((prev) =>
-      prev !== null ? (prev - 1 + photos.length) % photos.length : null,
-    );
-  }, []);
+    if (!selectedPhoto) return;
+    const currentIndex = displayPhotos.indexOf(selectedPhoto);
+    const prevIndex =
+      (currentIndex - 1 + displayPhotos.length) % displayPhotos.length;
+    setSelectedPhoto(displayPhotos[prevIndex]);
+  }, [selectedPhoto, displayPhotos]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (selectedImage === null) return;
+      if (!selectedPhoto) return;
       if (e.key === "Escape") closeLightbox();
       if (e.key === "ArrowRight") showNext();
       if (e.key === "ArrowLeft") showPrev();
     };
 
-    if (selectedImage !== null) {
+    if (selectedPhoto) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
@@ -49,7 +73,7 @@ export function Gallery() {
       window.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "auto";
     };
-  }, [selectedImage, closeLightbox, showNext, showPrev]);
+  }, [selectedPhoto, closeLightbox, showNext, showPrev]);
 
   return (
     <section id="gallery" className="py-20 bg-background">
@@ -64,11 +88,15 @@ export function Gallery() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[250px] max-w-5xl mx-auto">
-          {photos.map((photo, index) => (
+          {displayPhotos.map((photo, index) => (
             <motion.div
-              layoutId={`gallery-image-${index}`}
-              key={index}
-              onClick={() => setSelectedImage(index)}
+              layout
+              transition={{
+                duration: 0.8,
+                ease: "easeInOut",
+              }}
+              key={photo}
+              onClick={() => setSelectedPhoto(photo)}
               className={`relative rounded-xl overflow-hidden group shadow-sm border border-wedding-gold/10 cursor-pointer ${
                 index === 0
                   ? "col-span-2 md:col-span-2 row-span-2 md:row-span-2"
@@ -77,7 +105,7 @@ export function Gallery() {
             >
               <Image
                 src={photo}
-                alt={`Nuestra foto ${index + 1}`}
+                alt={`Nuestra foto`}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes={
@@ -92,7 +120,7 @@ export function Gallery() {
       </div>
 
       <AnimatePresence>
-        {selectedImage !== null && (
+        {selectedPhoto && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -136,7 +164,7 @@ export function Gallery() {
             >
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={selectedImage}
+                  key={selectedPhoto}
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
@@ -144,8 +172,8 @@ export function Gallery() {
                   className="relative w-full h-full flex items-center justify-center"
                 >
                   <Image
-                    src={photos[selectedImage]}
-                    alt={`Foto ampliada ${selectedImage + 1}`}
+                    src={selectedPhoto}
+                    alt={`Foto ampliada`}
                     fill
                     className="object-contain"
                     sizes="100vw"
