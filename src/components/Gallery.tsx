@@ -8,9 +8,10 @@ import { motion, AnimatePresence } from "framer-motion";
 const initialPhotos = [
   "/pareja1.jpeg",
   "/pareja2.jpeg",
-  "/pareja3.jpeg",
+  // "/pareja3.jpeg",
   "/pareja4.jpeg",
   "/pareja5.jpeg",
+  "/pareja6.jpeg",
 ];
 
 export function Gallery() {
