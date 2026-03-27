@@ -10,7 +10,7 @@ const initialPhotos = [
   "/pareja2.jpeg",
   // "/pareja3.jpeg",
   "/pareja4.jpeg",
-  "/pareja5.jpeg",
+  // "/pareja5.jpeg",
   "/pareja6.jpeg",
 ];
 
